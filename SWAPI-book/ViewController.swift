@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var name: String?
+    var hairColor: String?
+    var eyeColor: String?
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var hairColorLabel: UILabel!
+    @IBOutlet weak var eyeColorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        nameLabel.text = name ?? "Name"
+        hairColorLabel.text = hairColor ?? "Hair Color"
+        eyeColorLabel.text = eyeColor ?? "Eye Color"
+        
     }
 
-
 }
-
